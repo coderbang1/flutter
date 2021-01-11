@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(home: MyHomePage()),
+    );
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    const curveHeight = 20.0;
+
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[900],
+      appBar: AppBar(
+        
+        backgroundColor:Colors.black,
+        title: Text('curved',
+        style: TextStyle(color: Colors.deepOrangeAccent,
+        ),
+        
+        ),
+        centerTitle: true,
+        
+        
+        shape: const MyShapeBorder(curveHeight),
+      ),
+     
+    );
+  }
+}
+
+class MyShapeBorder extends ContinuousRectangleBorder {
+  const MyShapeBorder(this.curveHeight);
+  final double curveHeight;
+
+  @override
+  Path getOuterPath(Rect rect, {TextDirection textDirection}) => Path();
+  
+}
