@@ -33,7 +33,5 @@ class MyShapeBorder extends ContinuousRectangleBorder {
   const MyShapeBorder(this.curveHeight);
   final double curveHeight;
 
-  @override
-  Path getOuterPath(Rect rect, {TextDirection textDirection}) => Path();
-  
+
 }
